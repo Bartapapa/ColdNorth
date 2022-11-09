@@ -11,6 +11,9 @@ namespace GSGD1
 		private Tower _prefab = null;
 
 		[SerializeField]
+		private TowerFoundation _prefabFoundation = null;
+
+        [SerializeField]
 		private Sprite _icon = null;
 
 		[SerializeField]
@@ -30,6 +33,7 @@ namespace GSGD1
 
 		public Tower Instantiate()
 		{
+			//TODO Instantiate foundation prefab.
 			return GameObject.Instantiate(_prefab);
 		}
 	}
