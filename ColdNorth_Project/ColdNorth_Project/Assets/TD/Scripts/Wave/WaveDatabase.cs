@@ -13,7 +13,8 @@
 		None,
 		Light,
 		Heavy,
-		Speedy
+		Speedy,
+		Jumper
 	}
 
 	[CreateAssetMenu(menuName = "GameSup/WaveDatabase")]

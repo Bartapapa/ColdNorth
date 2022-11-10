@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd99a8f66606c214aa1a24137aa27a36, type: 3}
-  m_Name: WaveDatabase_00
+  m_Name: WaveDatabase_02
   m_EditorClassIdentifier: 
   _waveEntityDatas:
   - _waveEntityPrefab: {fileID: 5412690654039449867, guid: 6d9b29c4d27ec9245a717563b49c2d9e,
@@ -26,6 +26,6 @@ MonoBehaviour:
       type: 3}
     _entityType: 4
   _waveSets:
-  - {fileID: 11400000, guid: 9e99f870b57b8d94bb421111812714f8, type: 2}
-  - {fileID: 11400000, guid: 20efa7808731f5a448626b1120ddabd7, type: 2}
-  - {fileID: 11400000, guid: 2bbd3af9fe0970545b13328db6daced3, type: 2}
+  - {fileID: 11400000, guid: 7bc26dd4b4aee2447a8082f07fac4912, type: 2}
+  - {fileID: 11400000, guid: 414d8fdc1264776439a3a063186b5e00, type: 2}
+  - {fileID: 11400000, guid: 17722703d67cfee4e9c06dee1e461beb, type: 2}
