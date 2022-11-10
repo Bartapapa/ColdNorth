@@ -22,7 +22,10 @@ MonoBehaviour:
   - _waveEntityPrefab: {fileID: 5412690654039449867, guid: 5e3c08dd4a6bacf42b6cfcade9706784,
       type: 3}
     _entityType: 3
+  - _waveEntityPrefab: {fileID: 5412690654039449867, guid: 5e3c08dd4a6bacf42b6cfcade9706784,
+      type: 3}
+    _entityType: 4
   _waveSets:
-  - {fileID: 11400000, guid: a459061dc5860024590f76ddef462ecd, type: 2}
-  - {fileID: 11400000, guid: a9c7298a81a66744db5651281e0571cf, type: 2}
-  - {fileID: 11400000, guid: a459061dc5860024590f76ddef462ecd, type: 2}
+  - {fileID: 11400000, guid: 3e44dfc2151660343ad9d6e38b2b94e2, type: 2}
+  - {fileID: 11400000, guid: 8a670fd3277a6234b97e052320bf1441, type: 2}
+  - {fileID: 11400000, guid: 9ba1b2b70f1fc404dbe72ab90967ebeb, type: 2}
