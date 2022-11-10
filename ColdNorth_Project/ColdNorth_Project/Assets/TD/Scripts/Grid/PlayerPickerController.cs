@@ -18,6 +18,11 @@ namespace GSGD1
 		[System.NonSerialized]
 		private bool _isActive = false;
 
+		//[SerializeField]
+		//private PlayerGhostHandler playerGhostHandler = null;
+
+		public IPickerGhost Ghost => _ghost;
+
 		public void Activate(bool isActive)
 		{
 			_isActive = isActive;
@@ -65,9 +70,11 @@ namespace GSGD1
 				}
 				else if (_ghost != null)
 				{
-					_ghost.GetTransform().position = _gridPicker.HitPosition;
-				}
-			}
+                    //playerGhostHandler.PlaceGhost();
+                    //_ghost.GetTransform().position = playerGhostHandler.GhostTowerHolder.transform.position;
+                    _ghost.GetTransform().position = _gridPicker.HitPosition;
+                }
+            }
 
 		}
 

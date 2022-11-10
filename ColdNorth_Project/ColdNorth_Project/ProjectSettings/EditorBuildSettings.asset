@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/TD/Scenes/Main_Menu.unity
+    guid: a4986dff149b519458a43464a5f33143
+  - enabled: 1
+    path: Assets/TD/Scenes/TestScene_Arthur_01.unity
+    guid: 8c3ee03078e9a80479a5f687ac01c742
+  - enabled: 1
+    path: Assets/TD/Scenes/Screen_Win.unity
+    guid: 880fb4e137c879b4ca14a21ef0db10f7
+  - enabled: 1
+    path: Assets/TD/Scenes/Screen_Lose.unity
+    guid: 52dc8fe57588d6d4b9fc02e5b279ccc9
   m_configObjects: {}

@@ -15,3 +15,5 @@ MonoBehaviour:
   _prefab: {fileID: 302692793403659937, guid: 1ca56e8c042527848a0a75a78b1581e4, type: 3}
   _icon: {fileID: 21300000, guid: 782b88c042b68c84886d3da8649dfa5a, type: 3}
   _iconColor: {r: 0.18431373, g: 1, b: 0.9372549, a: 1}
+  _woodCost: 1
+  _stoneCost: 1

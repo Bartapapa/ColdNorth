@@ -11,6 +11,9 @@ namespace GSGD1
 		private Tower _prefab = null;
 
 		[SerializeField]
+		private TowerFoundation _prefabFoundation = null;
+
+        [SerializeField]
 		private Sprite _icon = null;
 
 		[SerializeField]
@@ -28,9 +31,12 @@ namespace GSGD1
 		public int WoodCost => _woodCost;
 		public int StoneCost => _stoneCost;
 
-		public Tower Instantiate()
+		public TowerFoundation TowerFoundation => _prefabFoundation;
+
+		public TowerFoundation Instantiate()
 		{
-			return GameObject.Instantiate(_prefab);
+			//TODO Instantiate foundation prefab.
+			return GameObject.Instantiate(_prefabFoundation);
 		}
 	}
 }
