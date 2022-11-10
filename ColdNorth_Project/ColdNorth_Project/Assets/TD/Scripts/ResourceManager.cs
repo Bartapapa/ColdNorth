@@ -17,6 +17,9 @@ public class ResourceManager : Singleton<ResourceManager>
     public delegate void ResourceEvent(ResourceManager.ResourceType resourceType, int quantityGained, int newQuantity);
     public event ResourceEvent ResourcesUpdated = null;
 
+    [Header("Base costs")]
+    [SerializeField] private int _foundationStoneCost = 1;
+
     [Header("Resources")]
     [SerializeField] private int _wood = 0;
     [SerializeField] private int _stone = 0;
@@ -24,6 +27,7 @@ public class ResourceManager : Singleton<ResourceManager>
     [Header("Stockpiles")]
     private List<Resource_Stockpile> _stockpiles = new List<Resource_Stockpile>();
 
+    public int FoundationStoneCost => _foundationStoneCost;
     public int Wood => _wood;
     public int Stone => _stone;
 

@@ -19,6 +19,7 @@ public class Resource_Stockpile : Resource
         _mostQuantity = Mathf.CeilToInt(((_maxResourceQuantity / 3) * 2));
 
         UpdateGFX();
+        ActivateTargetingRing(false);
     }
 
     private void Start()
