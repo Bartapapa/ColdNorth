@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TD/Scenes/Screen_Lose.unity
     guid: 52dc8fe57588d6d4b9fc02e5b279ccc9
+  - enabled: 1
+    path: Assets/TD/Scenes/Level1_Clotaire.unity
+    guid: 327028f391809f74ca42f6ff72081186
+  - enabled: 1
+    path: Assets/TD/Scenes/Level2_Clotaire.unity
+    guid: a2f30207d5e860c4d83fdb2eb37900ed
+  - enabled: 1
+    path: Assets/TD/Scenes/Level3_Clotaire.unity
+    guid: b535d5c4d1f28ac4280644da141861ac
   m_configObjects: {}
