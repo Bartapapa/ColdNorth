@@ -14,6 +14,9 @@ public class Resource : MonoBehaviour
     [SerializeField] protected GameObject _resource_BarelyGFX;
     [SerializeField] protected GameObject _resource_EmptyGFX;
 
+    [Header("Targeting")]
+    [SerializeField] protected GameObject _targetingRing;
+
     protected int _fullQuantity;
     protected int _mostQuantity;
 
@@ -29,6 +32,7 @@ public class Resource : MonoBehaviour
         _mostQuantity = Mathf.CeilToInt(((_maxResourceQuantity / 3) * 2));
 
         UpdateGFX();
+        ActivateTargetingRing(false);
     }
 
     public virtual void GetMined(int quantity)
@@ -76,8 +80,15 @@ public class Resource : MonoBehaviour
         }
     }
 
+    public void ActivateTargetingRing(bool value)
+    {
+        _targetingRing.SetActive(value);
+    }
+
     private void DestroyResource()
     {
+        gameObject.GetComponent<Collider>().enabled = false;
+        ActivateTargetingRing(false);
         Destroy(this);
     }
 }

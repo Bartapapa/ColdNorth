@@ -31,10 +31,12 @@ namespace GSGD1
 		public int WoodCost => _woodCost;
 		public int StoneCost => _stoneCost;
 
-		public Tower Instantiate()
+		public TowerFoundation TowerFoundation => _prefabFoundation;
+
+		public TowerFoundation Instantiate()
 		{
 			//TODO Instantiate foundation prefab.
-			return GameObject.Instantiate(_prefab);
+			return GameObject.Instantiate(_prefabFoundation);
 		}
 	}
 }

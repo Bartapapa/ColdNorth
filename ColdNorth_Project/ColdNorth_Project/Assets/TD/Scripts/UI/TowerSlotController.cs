@@ -23,8 +23,8 @@
 		[System.NonSerialized]
 		private TowerDescription _currentTowerDescription = null;
 
-		[SerializeField]
-		private PlayerGhostHandler _playerGhostHandler;
+		//[SerializeField]
+		//private PlayerGhostHandler _playerGhostHandler;
 
 		public PlayerPickerController PlayerPickerController
 		{
@@ -53,14 +53,14 @@
 
 		private void TowerSlotController_OnTowerSlotClicked(TowerSlot sender)
 		{
-			if (sender.TowerDescription.WoodCost > ResourceManager.Instance.Wood)
-			{
-				Debug.Log("You don't have enough wood!");
-				return;
-			}
-            if (sender.TowerDescription.StoneCost > ResourceManager.Instance.Stone)
+			//if (sender.TowerDescription.WoodCost > ResourceManager.Instance.Wood)
+			//{
+			//	Debug.Log("You don't have enough wood!");
+			//	return;
+			//}
+            if (ResourceManager.Instance.FoundationStoneCost > ResourceManager.Instance.Stone)
             {
-                Debug.Log("You don't have enough stone!");
+                Debug.Log("You don't have enough stone for a foundation!");
                 return;
             }
 
@@ -82,8 +82,8 @@
 						//Lose resources related to cost.
 
 						//float closestDistanceToWood = float.MaxValue;
-      //                  float closestDistanceToStone = float.MaxValue;
-      //                  Resource_Stockpile chosenWoodStockpile = null;
+						//                  float closestDistanceToStone = float.MaxValue;
+						//                  Resource_Stockpile chosenWoodStockpile = null;
 						//Resource_Stockpile chosenStoneStockpile = null;
 
 						//foreach(Resource_Stockpile stockpile in ResourceManager.Instance.Stockpiles)
@@ -98,35 +98,48 @@
 						//		}
 						//	}
 
-      //                      if (stockpile.ResourceType == ResourceManager.ResourceType.Stone)
-      //                      {
-      //                          float distance = Vector3.Distance(PlayerPickerController.Ghost.GetTransform().position, stockpile.transform.position);
-      //                          if (distance < closestDistanceToWood)
-      //                          {
-      //                              closestDistanceToStone = distance;
-      //                              chosenStoneStockpile = stockpile;
-      //                          }
-      //                      }
-      //                  }
+						//                      if (stockpile.ResourceType == ResourceManager.ResourceType.Stone)
+						//                      {
+						//                          float distance = Vector3.Distance(PlayerPickerController.Ghost.GetTransform().position, stockpile.transform.position);
+						//                          if (distance < closestDistanceToWood)
+						//                          {
+						//                              closestDistanceToStone = distance;
+						//                              chosenStoneStockpile = stockpile;
+						//                          }
+						//                      }
+						//                  }
 						//if (chosenWoodStockpile != null)
 						//{
-      //                      chosenWoodStockpile.GetMined(_currentTowerDescription.WoodCost);
-      //                  }
+						//                      chosenWoodStockpile.GetMined(_currentTowerDescription.WoodCost);
+						//                  }
 						//else
 						//{
 						//	Debug.Log("No chosen wood stockpile!");
 						//}
-      //                  if (chosenStoneStockpile != null)
-      //                  {
-      //                      chosenStoneStockpile.GetMined(_currentTowerDescription.StoneCost);
-      //                  }
-      //                  else
-      //                  {
-      //                      Debug.Log("No chosen stone stockpile!");
-      //                  }
+						//                  if (chosenStoneStockpile != null)
+						//                  {
+						//                      chosenStoneStockpile.GetMined(_currentTowerDescription.StoneCost);
+						//                  }
+						//                  else
+						//                  {
+						//                      Debug.Log("No chosen stone stockpile!");
+						//                  }
 
-                        //ResourceManager.Instance.OnResourceUpdate(ResourceManager.ResourceType.Wood, -_currentTowerDescription.WoodCost, 0);
-                        //ResourceManager.Instance.OnResourceUpdate(ResourceManager.ResourceType.Stone, -_currentTowerDescription.StoneCost, 0);
+						//ResourceManager.Instance.OnResourceUpdate(ResourceManager.ResourceType.Wood, -_currentTowerDescription.WoodCost, 0);
+						//ResourceManager.Instance.OnResourceUpdate(ResourceManager.ResourceType.Stone, -_currentTowerDescription.StoneCost, 0);
+						foreach (Resource_Stockpile stockpile in ResourceManager.Instance.Stockpiles)
+						{
+							if (stockpile.ResourceQuantity >= ResourceManager.Instance.FoundationStoneCost && stockpile.ResourceType == ResourceManager.ResourceType.Stone)
+							{
+								stockpile.GetMined(ResourceManager.Instance.FoundationStoneCost);
+                                ChangeState(State.Available);
+                                return;
+							}
+							else
+							{
+								Debug.Log("You don't have enough stone!");
+							}
+						}
                         ChangeState(State.Available);
 					}
 				}
